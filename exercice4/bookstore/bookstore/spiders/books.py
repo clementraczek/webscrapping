@@ -18,7 +18,7 @@ class BooksSpider(scrapy.Spider):
         for book in books:
             item = BookItem()
             item["title"] = book.css("h3 a::attr(title)").get()
-            item["price"] = book.css(".price_color::text").get()
+            item["price"] = float(book.css(".price_color::text").get().replace('£',''))
             item["rating"] = book.css("p::attr(class)").get()
             item["availability"] = book.css(".availability::text").re_first(r"\S.*\S")
 
