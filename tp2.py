@@ -37,7 +37,7 @@ def get_next_page(soup):
 def scrape_all_quotes(max_pages=10, delay=1):
     url = "http://quotes.toscrape.com"
     all_quotes = []
-    page_count = 0
+    page_count = 1
 
     while url and page_count < max_pages:
         print(f"Scraping page {page_count+1}: {url}")

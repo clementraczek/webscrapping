@@ -3,7 +3,7 @@
 # Please refer to the documentation for information on how to create and manage
 # your spiders.
 import scrapy
-from bookstore.items import BookItem
+from e_commerce.items import BookItem
 
 class BooksSpider(scrapy.Spider):
     name = "books"
